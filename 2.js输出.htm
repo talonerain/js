@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js输出</title>
+    </head>
+    <body>
+        <p>js可以通过以下方式来输出数据：</p>
+        <p>1. 使用window.alert()弹出警告框</p>
+        <p>2. document.write()方法将内容写到html中</p>
+        <p>3. innerHTML写入到HTML元素</p>
+        <p>4. console.log()写入到浏览器控制台</p>
+
+        <p>如需访问某个HTML元素，可以使用document.getElementById(id)方法</p>
+        <p id="demo">待修改段落</p>
+        <script>
+            document.getElementById("demo").innerHTML = "段落已修改"
+            document.write(new Date())
+        </script>
+        <p>如果在段落加载完成后执行document.write，整个html页面将被覆盖</p>
+        <button type="button" onclick="myFun()">点我测试全覆盖</button>
+        <script>
+            function myFun() {
+                document.write(Date())
+            }
+        </script>
+        <p>
+            使用console.log()方法在浏览器中调试，在调试窗口中点击Console菜单
+        </p>
+        <script>
+            a = 5
+            b = 6
+            c = a + b
+            console.log("控制台结果：" + c)
+        </script>
+    </body>
+</html>
